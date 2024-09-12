@@ -12,9 +12,10 @@ import { useForm } from "@mantine/form";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-export default function ResetPassword() {
-  const router = useRouter();
-  const { token } = router.query;
+export default function ResetPassword({ params }) {
+  // const router = useRouter();
+  // const { token } = router.query;
+  const token = params;
   const [passwordChanged, setPasswordChanged] = useState(false);
 
   const form = useForm({
